@@ -1,11 +1,11 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+:root {
+  font-size: 10px;
+  --white: #fff;
+  --light-green: #7ed56f;
+  --medium-green: #55c57a;
+  --dark-green: #28b485;
+  --gray: #777;
+}
 
 * {
   margin: 0;
@@ -16,8 +16,9 @@ Dark green: #28b485
 body {
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  padding: 30px;
+  color: var(--gray);
+  line-height: 1.7;
+  padding: 3rem;
 }
 
 .header {
@@ -34,34 +35,149 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  height: 35px;
+  top: 4rem;
+  left: 4rem;
+  height: 3.5rem;
 }
 
-.logo {
+.header__logo {
   height: 100%;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.header-title {
-  color: #fff;
-  font-weight: 400;
-  font-size: 60px;
+.header__title {
+  color: var(--white);
   text-transform: uppercase;
-  letter-spacing: 35px;
+  margin-bottom: 6rem;
 }
 
-.header-subtitle {
-  font-size: 20px;
-  letter-spacing: 17.8px;
-  margin-top: 20px;
+.header__title--main {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation: moveInLeft 1s ease-out;
+}
+
+.header__title--sub {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1s ease-out;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  color: var(--gray);
+  background-color: var(--white);
+}
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s backwards;
+}
+
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.btn--white::after {
+  background-color: var(--white);
+}
+
+.btn:hover::after {
+  animation: scaleIn 0.4s forwards;
+}
+
+@keyframes moveInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+  }
 }
