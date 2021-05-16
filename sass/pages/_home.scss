@@ -1,0 +1,31 @@
+.section {
+  &-about {
+    background-color: #f7f7f7;
+    padding: 25rem 0;
+    margin-top: -20vh;
+    &__content {
+      margin-top: 8rem;
+    }
+
+    &__composition {
+      position: relative;
+    }
+  }
+
+  &-benefit {
+    margin-top: -20vh;
+    @include background(
+      (
+        linear-gradient(
+          135deg,
+          rgba($color-light-green, 0.8) 0%,
+          rgba($color-dark-green, 0.8) 100%
+        ),
+        url(../../img/nat-4.jpg)
+      ),
+      cover,
+      bottom
+    );
+    clip-path: polygon(0 20vh, 100% 0, 100% 75vh, 0 100%);
+  }
+}

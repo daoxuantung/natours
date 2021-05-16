@@ -1,0 +1,50 @@
+.heading {
+  &__primary {
+    margin-bottom: 6rem;
+
+    &--main {
+      @include text($color-white, 6rem, 400, uppercase, 3.5rem);
+      @include animation(0, 1s, moveInLeft, ease-out);
+    }
+
+    &--sub {
+      @include text($color-white, 2rem, 700, uppercase, 1.75rem);
+      @include animation(0, 1s, moveInRight, ease-out);
+    }
+  }
+
+  &__secondary {
+    margin-bottom: 6rem;
+    @include text(transparent, 3.5rem, 700, uppercase, 2px);
+    @include background(
+      linear-gradient(
+        135deg,
+        rgba($color-light-green, 0.8) 0%,
+        rgba($color-dark-green, 0.8) 100%
+      ),
+      null,
+      null,
+      no-repeat,
+      text
+    );
+    transition: all 0.2s;
+    text-align: center;
+
+    &:hover {
+      transform: skewX(15deg) skewY(2deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-dark, 0.2);
+    }
+  }
+
+  &__tertiary {
+    @include text(null, 1.6rem, 700, uppercase);
+    margin-bottom: 2rem;
+  }
+}
+
+.paragraph {
+  &__primary {
+    @include text(null, 1.6rem, 400);
+    margin-bottom: 3rem;
+  }
+}

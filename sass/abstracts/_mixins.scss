@@ -1,0 +1,94 @@
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexBox($direction: row, $content: null, $items: null, $wrap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $items;
+  flex-wrap: $wrap;
+}
+
+@mixin absolute($top: null, $left: $top, $transform: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: $transform;
+}
+
+@mixin text(
+  $color: $color-gray,
+  $size: null,
+  $weight: 400,
+  $text-transform: null,
+  $spacing: normal,
+  $line-height: 1.7
+) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $text-transform;
+  letter-spacing: $spacing;
+  line-height: $line-height;
+}
+
+@mixin background(
+  $bg-image,
+  $bg-size,
+  $bg-position,
+  $bg-repeat: no-repeat,
+  $bg-clip: null
+) {
+  background-image: $bg-image;
+  background-size: $bg-size;
+  background-position: $bg-position;
+  background-repeat: $bg-repeat;
+  background-clip: $bg-clip;
+  -webkit-background-clip: $bg-clip;
+}
+
+@mixin animation(
+  $delay,
+  $duration,
+  $animation,
+  $direction: forward,
+  $fillmode: fowards
+) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: $fillmode;
+  -webkit-animation-direction: $direction;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: $fillmode;
+  -moz-animation-direction: $direction;
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: $fillmode;
+  animation-direction: $direction;
+}
+
+@mixin keyframe($animation_name) {
+  @-webkit-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation_name} {
+    @content;
+  }
+
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}

@@ -1,0 +1,28 @@
+.image {
+  width: 55%;
+  box-shadow: 0 2rem 3rem rgba($color-dark, 0.25);
+  transition: all 0.2s;
+
+  &:hover {
+    z-index: 40;
+    transform: translate(-5px, -5px);
+    width: 57.5%;
+    outline: solid $color-medium-green 15px;
+    outline-offset: 2rem;
+  }
+
+  &--1 {
+    @include absolute(-2rem, 0);
+    z-index: 10;
+  }
+
+  &--2 {
+    @include absolute(2rem, 24rem);
+    z-index: 20;
+  }
+
+  &--3 {
+    @include absolute(10rem, 11rem);
+    z-index: 30;
+  }
+}
