@@ -3,29 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
-
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
     <header class="header">
       <div class="header__logo-box">
-        <img
-          class="header__logo"
-          src="./img/logo-white.png"
-          alt="Natours Logo"
-        />
+        <a href="index.html">
+          <img
+            class="header__logo"
+            src="./img/logo-white.png"
+            alt="Natours Logo"
+        /></a>
       </div>
       <div class="header__text-box">
         <h1 class="heading__primary">
@@ -45,7 +43,7 @@
             <h3 class="heading__tertiary">
               You're going to fall in love with nature
             </h3>
-            <p class="paragraph__primary">
+            <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur libero repellat quis consequatur ducimus
               quam nisi exercitationem omnis earum qui.
@@ -53,7 +51,7 @@
             <h3 class="heading__tertiary">
               Live adventures like you never have before
             </h3>
-            <p class="paragraph__primary">
+            <p class="paragraph">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Asperiores nulla deserunt voluptatum nam.
             </p>
@@ -82,7 +80,128 @@
         </div>
       </section>
       <section class="section-benefit">
-        <i class="ri-admin-fill"></i>
+        <div class="row section-benefit__content">
+          <div class="col-1-4">
+            <div class="benefit">
+              <i class="ri-global-line icon"></i>
+              <h3 class="heading__tertiary">Explore the world</h3>
+              <p class="paragraph paragraph--small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div class="benefit">
+              <i class="ri-compass-3-line icon"></i>
+              <h3 class="heading__tertiary">Explore the world</h3>
+              <p class="paragraph paragraph--small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div class="benefit">
+              <i class="ri-map-2-line icon"></i>
+              <h3 class="heading__tertiary">Explore the world</h3>
+              <p class="paragraph paragraph--small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-4">
+            <div class="benefit">
+              <i class="ri-heart-3-line icon"></i>
+              <h3 class="heading__tertiary">Explore the world</h3>
+              <p class="paragraph paragraph--small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam, ipsum sapiente aspernatur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-tour">
+        <h2 class="heading__secondary">Most popular tours</h2>
+        <div class="row section-tour__content">
+          <div class="col-1-3">
+            <div class="card">
+              <div class="card--behind card--orange">
+                <h5 class="heading--white">Only</h5>
+                <h1 class="card__price">$297</h1>
+                <a href="#" class="btn btn--white btn--animate">Book now!</a>
+              </div>
+              <div class="card__image card__image--1">
+                <h4 class="heading__quaternary heading__quaternary--orange">
+                  The sea
+                </h4>
+                <h4 class="heading__quaternary heading__quaternary--orange">
+                  explorer
+                </h4>
+              </div>
+              <div class="card__content">
+                <p class="paragraph card__text">3 day tours</p>
+                <p class="paragraph card__text">Up to 30 people</p>
+                <p class="paragraph card__text">2 tour guides</p>
+                <p class="paragraph card__text">Sleep in cozy hotels</p>
+                <p class="paragraph card__text">Difficulty: easy</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-3 card">
+            <div class="card">
+              <div class="card--behind card--green">
+                <h5 class="heading--white">Only</h5>
+                <h1 class="card__price">$297</h1>
+                <a href="#" class="btn btn--white btn--animate">Book now!</a>
+              </div>
+              <div class="card__image card__image--2">
+                <h4 class="heading__quaternary heading__quaternary--green">
+                  The forest
+                </h4>
+                <h4 class="heading__quaternary heading__quaternary--green">
+                  hiker
+                </h4>
+              </div>
+              <div class="card__content">
+                <p class="paragraph card__text">7 day tours</p>
+                <p class="paragraph card__text">Up to 40 people</p>
+                <p class="paragraph card__text">6 tour guides</p>
+                <p class="paragraph card__text">Sleep in provided tents</p>
+                <p class="paragraph card__text">Difficulty: medium</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-3">
+            <div class="card">
+              <div class="card--behind card--blue">
+                <h5 class="heading--white">Only</h5>
+                <h1 class="card__price">$297</h1>
+                <a href="#" class="btn btn--white btn--animate">Book now!</a>
+              </div>
+              <div class="card__image card__image--3">
+                <h4 class="heading__quaternary heading__quaternary--blue">
+                  The snowr
+                </h4>
+                <h4 class="heading__quaternary heading__quaternary--blue">
+                  adventurer
+                </h4>
+              </div>
+              <div class="card__content">
+                <p class="paragraph card__text">5 day tours</p>
+                <p class="paragraph card__text">Up to 15 people</p>
+                <p class="paragraph card__text">3 tour guides</p>
+                <p class="paragraph card__text">Sleep in provided tents</p>
+                <p class="paragraph card__text">Difficulty: hard</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row card__btn">
+          <a href="#" class="btn btn--green">Discover all tours</a>
+        </div>
       </section>
     </main>
     <script src="./js/main.js"></script>

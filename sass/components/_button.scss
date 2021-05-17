@@ -32,6 +32,15 @@
     }
   }
 
+  &--green {
+    color: $color-white;
+    background-color: $color-medium-green;
+
+    &::after {
+      background-color: $color-medium-green;
+    }
+  }
+
   &::after {
     content: "";
     @include box(100%);
@@ -44,6 +53,10 @@
 
   &--animated {
     @include animation(0.75s, 0.5s, moveInBottom, ease-out, backwards);
+  }
+
+  &--animate {
+    @include animation(0.25s, 0.5s, moveInBottom, ease-out, backwards);
   }
 
   &__secondary {

@@ -1,7 +1,7 @@
 .row {
   max-width: $flex-width;
   margin: 0 auto;
-  @include flexBox();
+  @include flexBox(null, space-between, null);
 
   [class^="col-"] ~ [class^="col-"] {
     margin-left: $flex-horizontal;

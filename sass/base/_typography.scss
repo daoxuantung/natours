@@ -14,7 +14,8 @@
   }
 
   &__secondary {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
+    display: inline-block;
     @include text(transparent, 3.5rem, 700, uppercase, 2px);
     @include background(
       linear-gradient(
@@ -28,7 +29,6 @@
       text
     );
     transition: all 0.2s;
-    text-align: center;
 
     &:hover {
       transform: skewX(15deg) skewY(2deg) scale(1.1);
@@ -40,11 +40,59 @@
     @include text(null, 1.6rem, 700, uppercase);
     margin-bottom: 2rem;
   }
+
+  &__quaternary {
+    padding: 0 1.5rem;
+    @include text($color-white, 3rem, 300, uppercase);
+    position: absolute;
+    right: 2rem;
+
+    &:first-child {
+      bottom: 8rem;
+      z-index: 8888;
+    }
+
+    &:last-child {
+      bottom: 4rem;
+      z-index: 9999;
+    }
+
+    &--orange {
+      background: linear-gradient(
+        to right,
+        rgba($color-light-orange, 0.8) 0%,
+        rgba($color-dark-orange, 0.8) 100%
+      );
+    }
+
+    &--green {
+      background: linear-gradient(
+        to right bottom,
+        rgba($color-light-green, 0.8) 0%,
+        rgba($color-dark-green, 0.8) 100%
+      );
+    }
+
+    &--blue {
+      background: linear-gradient(
+        to right bottom,
+        rgba($color-light-blue, 0.8) 0%,
+        rgba($color-dark-blue, 0.8) 100%
+      );
+    }
+  }
+
+  &--white {
+    @include text($color-white, 1.4rem, 400, uppercase);
+  }
 }
 
 .paragraph {
-  &__primary {
-    @include text(null, 1.6rem, 400);
-    margin-bottom: 3rem;
+  @include text(null, 1.6rem, 400);
+  margin-bottom: 3rem;
+
+  &--small {
+    font-size: 1.5rem;
+    margin-bottom: 0;
   }
 }

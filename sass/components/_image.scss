@@ -1,5 +1,6 @@
 .image {
   width: 55%;
+  border-radius: 3px;
   box-shadow: 0 2rem 3rem rgba($color-dark, 0.25);
   transition: all 0.2s;
 
@@ -19,6 +20,10 @@
   &--2 {
     @include absolute(2rem, 24rem);
     z-index: 20;
+
+    &:hover > .image {
+      width: 52.5%;
+    }
   }
 
   &--3 {

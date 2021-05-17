@@ -3,7 +3,7 @@
   height: $height;
 }
 
-@mixin flexBox($direction: row, $content: null, $items: null, $wrap: null) {
+@mixin flexBox($direction: row, $content: null, $items: null, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $content;

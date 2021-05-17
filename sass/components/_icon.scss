@@ -1,0 +1,5 @@
+.icon {
+  display: inline-block;
+  @include text($color-medium-green, 7rem, 300, null, null, normal);
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,118 @@
+.card {
+  background-color: $color-white;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 3rem rgba($color-dark, 0.1);
+  @include flexBox(column);
+  position: relative;
+
+  &:hover &--behind {
+    display: flex;
+    z-index: 9999;
+  }
+
+  &--behind {
+    width: 100%;
+    height: 100%;
+    @include flexBox(column, center, center);
+    @include absolute(0);
+    display: none;
+  }
+
+  &--orange {
+    background: linear-gradient(
+      to right bottom,
+      rgba($color-light-orange, 0.8) 0%,
+      rgba($color-dark-orange, 0.8) 100%
+    );
+  }
+
+  &--green {
+    background: linear-gradient(
+      to right bottom,
+      rgba($color-light-green, 0.8) 0%,
+      rgba($color-dark-green, 0.8) 100%
+    );
+  }
+
+  &--blue {
+    background: linear-gradient(
+      to right bottom,
+      rgba($color-light-blue, 0.8) 0%,
+      rgba($color-dark-blue, 0.8) 100%
+    );
+  }
+
+  &__image {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen;
+    height: 23rem;
+    position: relative;
+
+    &--1 {
+      @include background(
+        (
+          linear-gradient(
+            to right bottom,
+            rgba($color-light-orange, 0.8) 0%,
+            rgba($color-dark-orange, 0.8) 100%
+          ),
+          url(../../img/nat-5.jpg)
+        ),
+        cover,
+        center
+      );
+    }
+
+    &--2 {
+      @include background(
+        (
+          linear-gradient(
+            to right bottom,
+            rgba($color-light-green, 0.8) 0%,
+            rgba($color-dark-green, 0.8) 100%
+          ),
+          url(../../img/nat-6.jpg)
+        ),
+        cover,
+        center
+      );
+    }
+
+    &--3 {
+      @include background(
+        (
+          linear-gradient(
+            to right bottom,
+            rgba($color-light-blue, 0.8) 0%,
+            rgba($color-dark-blue, 0.8) 100%
+          ),
+          url(../../img/nat-7.jpg)
+        ),
+        cover,
+        center
+      );
+    }
+  }
+
+  &__content {
+    padding: 3rem 5.5rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(#eee, 0.75);
+  }
+
+  &__price {
+    margin-bottom: 10rem;
+    @include text($color-white, 6rem, 200);
+  }
+
+  &__btn {
+    justify-content: center !important;
+    margin-top: 10rem !important;
+  }
+}

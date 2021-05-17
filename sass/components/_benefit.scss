@@ -1,0 +1,11 @@
+.benefit {
+  border-radius: 3px;
+  background-color: rgba($color-white, 0.77);
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-15px) scale(1.05);
+  }
+}

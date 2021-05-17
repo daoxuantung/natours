@@ -1,31 +1,51 @@
 .section {
   &-about {
-    background-color: #f7f7f7;
+    background-color: $bg-color;
     padding: 25rem 0;
-    margin-top: -20vh;
+    margin-top: -15rem;
     &__content {
       margin-top: 8rem;
     }
 
     &__composition {
       position: relative;
+
+      &:hover .image:not(:hover) {
+        width: 52.5%;
+        transform: translate(5px, 5px);
+      }
+    }
+    &__text {
+      text-align: start;
     }
   }
 
   &-benefit {
-    margin-top: -20vh;
+    margin-top: -10rem;
+    padding: 20rem 0;
     @include background(
       (
         linear-gradient(
-          135deg,
+          to right bottom,
           rgba($color-light-green, 0.8) 0%,
           rgba($color-dark-green, 0.8) 100%
         ),
         url(../../img/nat-4.jpg)
       ),
       cover,
-      bottom
+      top
     );
-    clip-path: polygon(0 20vh, 100% 0, 100% 75vh, 0 100%);
+    transform: skewY(-7deg);
+
+    &__content {
+      transform: skewY(7deg);
+    }
+  }
+
+  &-tour {
+    background-color: $bg-color;
+    padding-top: 25rem;
+    padding-bottom: 14rem;
+    margin-top: -10rem;
   }
 }
