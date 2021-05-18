@@ -74,3 +74,43 @@
     }
   }
 }
+
+.button {
+  display: inline-block;
+  @include text(null, 1.6rem, 400, uppercase);
+  margin-bottom: 2rem;
+  padding: 1.1rem 4rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+
+  &--green {
+    color: $color-white;
+    background-color: $color-medium-green;
+
+    &::after {
+      background-color: $color-medium-green;
+    }
+  }
+
+  &::after {
+    content: "";
+    @include box(100%);
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.4s;
+    @include absolute(0);
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 2rem rgba($color-dark, 0.2);
+
+    &::after {
+      @include animation(0, 0.4s, scaleIn, null);
+    }
+  }
+}

@@ -22,24 +22,24 @@
   &--orange {
     background: linear-gradient(
       to right bottom,
-      rgba($color-light-orange, 0.8) 0%,
-      rgba($color-dark-orange, 0.8) 100%
+      rgba($color-light-orange, 1) 0%,
+      rgba($color-dark-orange, 1) 100%
     );
   }
 
   &--green {
     background: linear-gradient(
       to right bottom,
-      rgba($color-light-green, 0.8) 0%,
-      rgba($color-dark-green, 0.8) 100%
+      rgba($color-light-green, 1) 0%,
+      rgba($color-dark-green, 1) 100%
     );
   }
 
   &--blue {
     background: linear-gradient(
       to right bottom,
-      rgba($color-light-blue, 0.8) 0%,
-      rgba($color-dark-blue, 0.8) 100%
+      rgba($color-light-blue, 1) 0%,
+      rgba($color-dark-blue, 1) 100%
     );
   }
 

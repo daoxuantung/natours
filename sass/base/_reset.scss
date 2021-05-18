@@ -22,10 +22,6 @@ section {
   text-align: center;
 }
 
-section ~ section {
-  margin-top: $section-margin;
-}
-
 a {
   text-decoration: none;
 }

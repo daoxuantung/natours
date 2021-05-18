@@ -1,6 +1,5 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
-@import "abstracts/functions";
 
 @import "base/animations";
 @import "base/reset";
@@ -11,8 +10,11 @@
 @import "components/benefit";
 @import "components/icon";
 @import "components/card";
+@import "components/story";
 
 @import "layout/flex";
 @import "layout/header";
+@import "layout/form";
+@import "layout/footer";
 
 @import "pages/home";

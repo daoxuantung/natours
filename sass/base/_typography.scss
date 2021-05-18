@@ -14,7 +14,7 @@
   }
 
   &__secondary {
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
     display: inline-block;
     @include text(transparent, 3.5rem, 700, uppercase, 2px);
     @include background(
@@ -38,7 +38,7 @@
 
   &__tertiary {
     @include text(null, 1.6rem, 700, uppercase);
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
   }
 
   &__quaternary {
@@ -94,5 +94,9 @@
   &--small {
     font-size: 1.5rem;
     margin-bottom: 0;
+  }
+
+  &--start {
+    text-align: start;
   }
 }

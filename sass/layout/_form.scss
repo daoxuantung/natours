@@ -1,0 +1,107 @@
+.form {
+  margin-top: 4rem;
+  width: calc(100% * 0.88 / (0.56 * 2));
+
+  &__input ~ &__input {
+    margin-top: 5rem;
+  }
+
+  &__input {
+    position: relative;
+
+    label {
+      @include text($color-gray, 1.2rem, 600);
+      @include absolute(-3rem, 2rem);
+      opacity: 1;
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      border: none;
+      padding: 1.25rem 2rem;
+      outline: none;
+      border-radius: 3px;
+      @include text($color-gray, 1.5rem, 400);
+      background-color: $color-white;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s;
+
+      &::placeholder {
+        @include text($color-light-gray, 1.5rem, 400);
+      }
+
+      &:focus {
+        box-shadow: 0 1rem 2rem rgba($color-dark, 0.15);
+      }
+
+      &:focus:valid {
+        border-color: $color-medium-green;
+      }
+
+      &:focus:invalid {
+        border-color: $color-red;
+      }
+    }
+
+    input:placeholder-shown ~ label {
+      opacity: 1;
+      font-size: 1.5rem;
+      color: $color-light-gray;
+      @include absolute(1.2rem, 2rem);
+      z-index: -1;
+    }
+  }
+
+  &__check-box {
+    @include flexBox(null, null, center);
+    margin: 4rem 0;
+  }
+
+  &__item ~ &__item {
+    margin-left: auto;
+  }
+
+  &__item {
+    margin-left: 4rem;
+    label {
+      display: inline-block;
+      width: 100%;
+      @include text($color-gray, 1.6rem, 400);
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        @include box(2rem);
+        border: 5px solid $color-medium-green;
+        border-radius: 50%;
+        @include absolute(0rem, -4rem);
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        @include box(1.3rem);
+        background-color: $color-medium-green;
+        border-radius: 50%;
+        @include absolute(0.87rem, -3.16rem);
+        opacity: 0;
+        transform: scale(0.1);
+        transition: all 0.2s;
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked ~ label::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
