@@ -1,0 +1,51 @@
+.nav {
+  @include box(100%);
+  @include flexBox(column, center, center);
+
+  &__item {
+    display: inline-block;
+    padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -5rem;
+      top: 0;
+      width: 0;
+      height: 100%;
+      z-index: -1;
+      transition: 0.5s;
+      transform: skewX(-30deg);
+      background-color: #fff;
+    }
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    &:hover::after {
+      background-color: #fff;
+      width: 150%;
+    }
+  }
+
+  &__item:hover &__link {
+    color: $color-medium-green;
+  }
+
+  &__item ~ &__item {
+    margin-top: 1rem;
+  }
+
+  &__link:visited,
+  &__link:link {
+    display: inline-block;
+    height: 100%;
+    @include text($color-white, 3rem, 300, uppercase, normal);
+    transition: all 0.5s;
+  }
+}
+
